@@ -1,5 +1,6 @@
 {
   "name": "my-order",
+  "homepage": "https://reactprac1.lukegong.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

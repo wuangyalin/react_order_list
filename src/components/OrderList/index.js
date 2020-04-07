@@ -24,10 +24,24 @@ export default class OrderList extends Component {
             <div>
             {
                 this.state.datas.map(data => {
-                    return <OrderItem key={data.id} data={data} />
+                    return <OrderItem key={data.id} data={data} onSubmit={this.handleSubmit} />
                 })
             }
             </div>
         )
+    }
+
+    handleSubmit = (id,comment,stars) => {
+        // featch('saveComment').then(()=>{
+
+        // })
+        const newDatas = this.state.datas.map(item=>{
+            return item.id === id ? {
+                ...item, comment, stars, ifCommented: true
+            } : item
+        });
+        this.setState({
+            datas: newDatas
+        });
     }
 }

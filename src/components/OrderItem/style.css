@@ -67,3 +67,8 @@
  .orderItem__btn--grey{
     background-color:#999;
  }
+
+ .orderItem__comment{
+    width: 100%;
+    margin-top: 10px;
+ }
